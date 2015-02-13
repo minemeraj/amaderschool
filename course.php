@@ -67,9 +67,6 @@ while ($row = mysql_fetch_array($result)) {
 
 	if (isset($row['ID'])) {
 		$course_id = $row['ID'];
-		if (chk_taken_course_by_id($_SESSION['id'], $row['ID'])) {
-			goto skip;
-		}
 	}
 	if (isset($row['id'])) {
 		$course_id = $row['id'];
@@ -99,12 +96,12 @@ while ($row = mysql_fetch_array($result)) {
 		// echo '<li><a href="edit.php?email=';
 		// echo urlencode($row["Email"]);
 		// echo '"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-            // <li><a href="delete.php?email=';
-		// echo urlencode($row["Email"]);
-		// echo '"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>';
+		echo '<li><a href="delete_course.php?id=';
+		echo urlencode($row["ID"]);
+		echo '"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>';
 	}
 
-	if (!($_SESSION['role'] == 'admin') && !($show == "taken")) {
+	if (!($_SESSION['role'] == 'admin') && !($show == "taken") && !(chk_taken_course_by_id($_SESSION['id'], $row['ID']))) {
 		echo '<li><a href="add_course.php?id=';
 		echo $course_id;
 		echo '"><i class="fa fa-plus fa-fw"></i> Add</a></li>';
@@ -127,7 +124,7 @@ while ($row = mysql_fetch_array($result)) {
 	}
 	$counter++;
 
-	skip:
+
 }
 ?>
 <div class="row-fluid">

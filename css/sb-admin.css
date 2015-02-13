@@ -334,3 +334,9 @@ table.dataTable thead .sorting:after {
 	background: transparent;
 	border: 0;
 }
+
+.clear {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
