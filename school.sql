@@ -127,7 +127,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`ID`, `Name`, `User_Id`, `Email`, `Password`, `Gender`, `ContactNo`, `DateOfBirth`, `Address`, `Salary`, `tutionfee`, `Role`, `isActive`, `Picture`) VALUES
 (21, 'moin', 't31', 'moin@gmail.com', 'agshssdfhgfdhhfgsgh', 'M', 'asdgfsasf', '1990-12-05', 'asfasf', NULL, NULL, 'teacher', 1, 'uploads/male/teacher.png'),
-(5, 'Aparna Rani Dey', 'a5', 'aparna.ranidey07@gmail.com', '123456', 'F', '01752998660', '1989-01-01', 'Farmgate, Dhaka', NULL, NULL, 'admin', 1, 'uploads/8e18b1b3_o.jpeg'),
 (31, 'masum', 't31', 'masum.eu9@gmail.com', '01913449590', 'M', '01913871881', '1990-12-29', '4/a,Zigatola,Dhanmondi, Dhaka-1209', NULL, NULL, 'teacher', 1, 'uploads/male/teacher.png'),
 (33, 'raj', 'std33', 'raj@gmail.com', '123456', 'M', '', '2014-12-02', '', NULL, NULL, 'student', 1, 'uploads/1802297-master_shifu_5.jpg'),
 (23, 'nishu', 't23', 'nishu@gmail.com', '123456', 'F', '', '2014-12-23', '', NULL, NULL, 'teacher', 1, 'uploads/female/teacher.png'),
